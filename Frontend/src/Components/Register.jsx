@@ -17,6 +17,8 @@ const Register = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [passwordError, setPasswordError] = useState("");
+  const [submitError, setSubmitError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const indianStates = [
     "Andhra Pradesh",
@@ -109,6 +111,7 @@ const Register = () => {
       navigate("/");
     } catch (error) {
       console.error("Registration error:", error);
+      setSubmitError(error.message || "Registration failed. Please try again.");
     } finally {
       setIsLoading(false);
     }
