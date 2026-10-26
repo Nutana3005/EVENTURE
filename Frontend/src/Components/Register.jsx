@@ -255,6 +255,17 @@ const Register = () => {
             {isLoading ? "Processing..." : "Register"}
           </button>
         </form>
+        {submitError && (
+  <p role="alert" className="text-red-400 text-sm mt-4">
+    {submitError}
+  </p>
+)}
+
+{successMessage && (
+  <p role="status" className="text-green-400 text-sm mt-4">
+    {successMessage}
+  </p>
+)}
       </motion.div>
     </div>
   );
