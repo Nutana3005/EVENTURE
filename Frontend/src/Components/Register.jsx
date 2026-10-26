@@ -126,6 +126,7 @@ const Register = () => {
         src={eventBg}
         alt="Event Background"
         onLoad={handleVideoLoad}
+         onError={handleVideoLoad}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
 
@@ -246,7 +247,7 @@ const Register = () => {
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition duration-300 disabled:opacity-50 font-medium"
-            disabled={isLoading || !isVideoLoaded}
+            disabled={isLoading}
           >
             {isLoading ? "Processing..." : "Register"}
           </button>
