@@ -9,14 +9,20 @@ import connectDB from "./database/db.js";
 dotenv.config();
 connectDB();
 const app = express();
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://nutana3005.github.io"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
                            
 
 // Middleware
