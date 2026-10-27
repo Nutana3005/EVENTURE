@@ -82,7 +82,7 @@ const Register = () => {
     
     try {
       const response = await fetch(
-        "https://eventure-backend-on5d.onrender.com",
+        "https://eventure-backend-on5d.onrender.com/api/users/register",
         {
           method: "POST",
           headers: {
